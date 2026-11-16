@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICN Lab @ KBRI | Intercellular Communication for Cognitive Enhancement and Neuroplasticity</title>
+  <meta name="description" content="ICN Lab at the Korea Brain Research Institute (KBRI) — Decoding neuron–astrocyte and body–brain crosstalk for cognitive enhancement and neuroplasticity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient Neural Network Canvas -->
+  <canvas id="neural-bg" aria-hidden="true"></canvas>
+  <div class="ambient-glow ambient-glow--top" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--bottom" aria-hidden="true"></div>
+
+  <!-- Fixed Top Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#sec-1" class="brand-group" data-goto="0" aria-label="ICN Lab at KBRI Home">
+        <span class="brand-logo-wrap">
+          <img src="assets/icn_logo.png?v=hires" alt="ICN Lab Logo" class="brand-logo" />
+        </span>
+        <span class="brand-title-wrap">
+          <span class="brand-title">ICN Lab <span class="brand-at">@</span> KBRI</span>
+          <span class="brand-sub">Cognitive Enhancement &amp; Neuroplasticity</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Section navigation">
+        <a href="#sec-1" class="nav-link is-active" data-goto="0"><span class="nav-num">01</span> Intro</a>
+        <a href="#sec-2" class="nav-link" data-goto="1"><span class="nav-num">02</span> Body–Brain</a>
+        <a href="#sec-3" class="nav-link" data-goto="2"><span class="nav-num">03</span> Epilepsy</a>
+        <a href="#sec-4" class="nav-link" data-goto="3"><span class="nav-num">04</span> Publications (2020–)</a>
+        <a href="#sec-5" class="nav-link" data-goto="4"><span class="nav-num">05</span> Publications (2005–)</a>
+        <a href="#sec-6" class="nav-link" data-goto="5"><span class="nav-num">06</span> Team</a>
+        <a href="#sec-7" class="nav-link" data-goto="6"><span class="nav-num">07</span> Join Us</a>
+      </nav>
+
+      <div class="header-right">
+        <div class="page-counter" aria-live="polite">
+          <span id="current-page-num">01</span>
+          <span class="counter-sep">/</span>
+          <span class="counter-total">07</span>
+        </div>
+        <div class="kbri-logo-wrap" title="Korea Brain Research Institute (KBRI)">
+          <img src="assets/kbri_logo.png?v=hires" alt="Korea Brain Research Institute (KBRI) Logo" class="kbri-logo" />
+        </div>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="header-progress-track" aria-hidden="true">
+      <div class="header-progress-bar" id="header-progress-bar"></div>
+    </div>
+  </header>
+
+  <!-- Right Fixed Dot Navigation -->
+  <aside class="dot-nav" aria-label="Page indicator">
+    <button type="button" class="dot-btn is-active" data-goto="0" aria-label="Go to Section 1: Intro">
+      <span class="dot-tooltip">01 Intro</span>
+      <span class="dot-circle"></span>
+    </button>
+    <button type="button" class="dot-btn" data-goto="1" aria-label="Go to Section 2: Body–Brain">
+      <span class="dot-tooltip">02 Body–Brain</span>
+      <span class="dot-circle"></span>
+    </button>
+    <button type="button" class="dot-btn" data-goto="2" aria-label="Go to Section 3: Epilepsy">
+      <span class="dot-tooltip">03 Epilepsy</span>
+      <span class="dot-circle"></span>
+    </button>
+    <button type="button" class="dot-btn" data-goto="3" aria-label="Go to Section 4: Publications (2020–)">
+      <span class="dot-tooltip">04 Publications (2020–)</span>
+      <span class="dot-circle"></span>
+    </button>
+    <button type="button" class="dot-btn" data-goto="4" aria-label="Go to Section 5: Publications (2005–)">
+      <span class="dot-tooltip">05 Publications (2005–)</span>
+      <span class="dot-circle"></span>
+    </button>
+    <button type="button" class="dot-btn" data-goto="5" aria-label="Go to Section 6: Team">
+      <span class="dot-tooltip">06 Team</span>
+      <span class="dot-circle"></span>
+    </button>
+    <button type="button" class="dot-btn" data-goto="6" aria-label="Go to Section 7: Join Us">
+      <span class="dot-tooltip">07 Join Us</span>
+      <span class="dot-circle"></span>
+    </button>
+  </aside>
+
+  <!-- Full-Page Scroll Container -->
+  <main class="fullpage-container" id="fullpage">
+
+    <!-- ==================== SECTION 1: HERO & NEURON-ASTROCYTE CROSSTALK ==================== -->
+    <section class="page-section is-active" id="sec-1" data-section-index="0" aria-labelledby="sec1-title">
+      <div class="section-shell sec1-shell">
+        <div class="hero-block reveal" style="--delay: 0.05s;">
+          <div class="hero-kicker">
+            <span class="kicker-dot"></span>
+            <span>Introducing ICN @ KBRI</span>
+          </div>
+          <h1 class="hero-title" id="sec1-title">Decoding learning and memory for cognitive enhancement</h1>
+          <p class="hero-affiliation">
+            We are the <strong>Intercellular Communication for Cognitive Enhancement and Neuroplasticity (ICN) Lab</strong> at the <strong>Korea Brain Research Institute (KBRI)</strong>
+          </p>
+          <div class="question-banner">
+            <span class="question-label">Understanding intercellular crosstalk for cognitive enhancement</span>
+            <p class="question-quote">“Can memory be enhanced by targeting neuron–astrocyte or body–brain crosstalk?”</p>
+          </div>
+        </div>
+
+        <div class="sec1-subtopic reveal" style="--delay: 0.14s;">
+          <div class="subtopic-header">
+            <span class="pill-badge">Research Focus 01</span>
+            <h2>Neuron–astrocyte crosstalk in learning and memory</h2>
+          </div>
+
+          <div class="sec1-grid">
+            <div class="diagram-card diagram-card--hero reveal" style="--delay: 0.2s;">
+              <div class="diagram-frame diagram-frame--hero">
+                <img src="assets/fig_astrocyte.png?v=hires" alt="Schematic of normal vs. abnormal astrocyte crosstalk at the synapse" />
+              </div>
+            </div>
+
+            <div class="sec1-content-col reveal" style="--delay: 0.26s;">
+              <ul class="bullet-list glass-panel">
+                <li>Learning and memory depend on plastic changes in synaptic transmission.</li>
+                <li>Astrocytes contact synapses and exchange signals with neurons, shaping synaptic plasticity.</li>
+                <li>Modulating astrocyte function is a promising strategy for enhancing cognition.</li>
+                <li>The mechanisms of neuron–astrocyte communication during learning and memory remain unclear.</li>
+              </ul>
+
+              <div class="highlight-box">
+                <p>We combine molecular, cellular, electrophysiological, genetic, and behavioral approaches to discover new modes of neuron–astrocyte communication.</p>
+                <p>Our goal is to develop strategies that improve cognition in both healthy and diseased brains.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer-nav">
+          <button type="button" class="next-section-btn" data-goto="1">
+            <span>Next Section</span>
+            <span class="next-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 2: BODY-BRAIN CROSSTALK ==================== -->
+    <section class="page-section" id="sec-2" data-section-index="1" aria-labelledby="sec2-title">
+      <div class="section-shell sec2-shell">
+        <header class="section-head reveal" style="--delay: 0.05s;">
+          <span class="pill-badge">Research Focus 02</span>
+          <h2 class="section-title" id="sec2-title">Body–brain crosstalk in learning and memory</h2>
+        </header>
+
+        <div class="sec2-grid">
+          <!-- Left Column: Explanation & Research Outcomes -->
+          <div class="sec2-text-col">
+            <article class="glass-card sec2-card reveal" style="--delay: 0.14s;">
+              <div class="card-tag">Background &amp; Hypothesis</div>
+              <ul class="bullet-list">
+                <li>Physical activity, including exercise, can improve memory.</li>
+                <li>Exercise-induced factors released from peripheral organs, especially skeletal muscle, contribute to these cognitive benefits.</li>
+                <li>Additional muscle-derived signals that influence brain function may remain undiscovered.</li>
+              </ul>
+            </article>
+
+            <article class="glass-card glass-card--accent sec2-card reveal" style="--delay: 0.24s;">
+              <div class="card-tag card-tag--teal">Key Findings &amp; Strategy</div>
+              <ul class="bullet-list">
+                <li>Using organ-specific protein labeling, we identified multiple exercise-induced factors released from muscle.</li>
+                <li>Raising blood levels of selected muscle-derived factors reproduced the memory benefits of exercise.</li>
+                <li>We are investigating how these factors act on the brain to enhance memory.</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Right Column: Unified Body–Brain Figure Panel -->
+          <div class="diagram-card sec2-figure-panel reveal" style="--delay: 0.2s;">
+            <div class="diagram-frame sec2-composite-board">
+              <div class="sec2-top-axis">
+                <img src="assets/fig_muscle_brain.png?v=hires" alt="Exercise to skeletal muscle to blood vessel to brain cognition pathway" />
+              </div>
+              <div class="sec2-bottom-composite">
+                <div class="sec2-turboid-row">
+                  <img src="assets/fig_turboid.png?v=hires" alt="Organ-specific TurboID-V5-KDEL ER protein labeling in muscle" />
+                </div>
+                <div class="sec2-data-row">
+                  <img src="assets/fig_heatmap.png?v=hires" alt="Proteomic profiling heatmap of exercise-induced muscle-derived factors" class="sec2-heatmap-img" />
+                  <img src="assets/fig_iv_timeline.png?v=hires" alt="Systemic administration and behavioral testing timeline" class="sec2-timeline-img" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer-nav">
+          <button type="button" class="next-section-btn" data-goto="2">
+            <span>Next Section</span>
+            <span class="next-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 3: EPILEPSY & COGNITIVE RESTORATION ==================== -->
+    <section class="page-section" id="sec-3" data-section-index="2" aria-labelledby="sec3-title">
+      <div class="section-shell sec3-shell">
+        <header class="section-head reveal" style="--delay: 0.05s;">
+          <span class="pill-badge">Research Focus 03</span>
+          <h2 class="section-title" id="sec3-title">Restoring cognitive function in the diseased adult brain</h2>
+        </header>
+
+        <div class="sec3-grid">
+          <!-- Left: 1 -> 2 -> 3 Flow Cards -->
+          <div class="sec3-flow-col">
+            <article class="glass-card flow-card reveal" style="--delay: 0.12s;">
+              <div class="flow-card-head">
+                <span class="flow-step">1</span>
+                <h3>Why epilepsy?</h3>
+              </div>
+              <ul class="bullet-list bullet-list--compact">
+                <li>One of the three most common neurological disorders</li>
+                <li>Often begins in adulthood</li>
+                <li>About 35% of cases remain drug-resistant</li>
+                <li>Frequently disrupts learning and memory</li>
+              </ul>
+            </article>
+
+            <article class="glass-card flow-card reveal" style="--delay: 0.2s;">
+              <div class="flow-card-head">
+                <span class="flow-step">2</span>
+                <h3>Synaptic pathology of Temporal Lobe Epilepsy (TLE)</h3>
+              </div>
+              <ul class="bullet-list bullet-list--compact">
+                <li>Hyperconnected, hyperactive neural circuits</li>
+                <li>Abnormal synaptic structure and activity</li>
+                <li>Impaired synaptic plasticity and memory</li>
+                <li>Molecular mechanisms at synapses remain unclear</li>
+              </ul>
+            </article>
+
+            <article class="glass-card glass-card--accent flow-card reveal" style="--delay: 0.28s;">
+              <div class="flow-card-head">
+                <span class="flow-step flow-step--teal">3</span>
+                <h3>Our approach</h3>
+              </div>
+              <ul class="bullet-list bullet-list--compact">
+                <li>Joint KBRI–DGIST–Sungkyunkwan–Ewha research program</li>
+                <li>Ultrasound stimulation paired with high-sensitivity neural activity monitoring</li>
+                <li>Preclinical and clinical evaluation of stimulation efficacy</li>
+                <li>Identify synaptic mechanisms that suppress seizures and restore cognition.</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Right: Unified Workflow & Consortium Visual Panel -->
+          <div class="sec3-visual-col">
+            <div class="diagram-card sec3-figure-panel reveal" style="--delay: 0.18s;">
+              <div class="diagram-frame sec3-composite-board">
+                <img src="assets/fig_epilepsy_workflow.png?v=hires" alt="Integrated technology for ultrasound stimulation and neuronal activity monitoring to clinical utilization" class="sec3-workflow-img" />
+                <img src="assets/fig_epilepsy_consortium.png?v=hires" alt="KBRI, Ewha Womans University, and SKKU + DGIST epilepsy research consortium" class="sec3-consortium-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-footer-nav">
+          <button type="button" class="next-section-btn" data-goto="3">
+            <span>Next Section</span>
+            <span class="next-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 4: SELECTED PUBLICATIONS (2020-PRESENT) ==================== -->
+    <section class="page-section" id="sec-4" data-section-index="3" aria-labelledby="sec4-title">
+      <div class="section-shell sec4-shell">
+        <header class="pub-header reveal" style="--delay: 0.05s;">
+          <div class="pub-header-left">
+            <span class="pill-badge">Research Output</span>
+            <h2 class="section-title" id="sec4-title">Selected publications</h2>
+            <p class="pub-period">2020–Present</p>
+          </div>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Hyungju+Park%5BFull+Author+Name%5D+NOT+%2839714435%5BPMID%5D+OR+15988923%5BPMID%5D+OR+15967507%5BPMID%5D%29&sort=date" target="_blank" rel="noopener noreferrer" class="pubmed-cta-btn">
+            <span>View the full list on PubMed ↗</span>
+          </a>
+        </header>
+
+        <ol class="pub-list pub-list--recent reveal" style="--delay: 0.14s;">
+          <li class="pub-item">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41957371/" target="_blank" rel="noopener noreferrer" class="pub-link">
+              <span class="pub-num">01</span>
+              <div class="pub-body">
+                <div class="pub-meta">
+                  <span class="journal-badge journal-badge--gold">Nat Commun</span>
+                  <span class="year-badge">2026</span>
+                  <span class="pub-ext">PubMed ↗</span>
+                </div>
+                <p class="pub-citation">Kim H, Shin S, Han J, Yun K, Kim JS, <strong>Park H</strong>. Serpina1e mediates the exercise-induced enhancement of hippocampal memory in male mice. <em>Nat Commun</em>. 2026;17(1):5018.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="pub-item">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/40082427/" target="_blank" rel="noopener noreferrer" class="pub-link">
+              <span class="pub-num">02</span>
+              <div class="pub-body">
+                <div class="pub-meta">
+                  <span class="journal-badge journal-badge--gold">Nat Commun</span>
+                  <span class="year-badge">2025</span>
+                  <span class="pub-ext">PubMed ↗</span>
+                </div>
+                <p class="pub-citation">Kim JY, Kim H, Chung WS, <strong>Park H</strong>. Selective regulation of corticostriatal synapses by astrocytic phagocytosis. <em>Nat Commun</em>. 2025;16(1):2504.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="pub-item">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/39814913/" target="_blank" rel="noopener noreferrer" class="pub-link">
+              <span class="pub-num">03</span>
+              <div class="pub-body">
+                <div class="pub-meta">
+                  <span class="journal-badge">Sci Rep</span>
+                  <span class="year-badge">2025</span>
+                  <span class="pub-ext">PubMed ↗</span>
+                </div>
+                <p class="pub-citation">Han J, <strong>Park H</strong>. Recycling of endocytic BDNF through extracellular vesicles in astrocytes. <em>Sci Rep</em>. 2025;15(1):2011.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="pub-item">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/34707216/" target="_blank" rel="noopener noreferrer" class="pub-link">
+              <span class="pub-num">04</span>
+              <div class="pub-body">
+                <div class="pub-meta">
+                  <span class="journal-badge">Sci Rep</span>
+                  <span class="year-badge">2021</span>
+                  <span class="pub-ext">PubMed ↗</span>
+                </div>
+                <p class="pub-citation">Han J, Yoon S, <strong>Park H</strong>. Endocytic BDNF secretion regulated by Vamp3 in astrocytes. <em>Sci Rep</em>. 2021;11(1):21203.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="pub-item">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33361813/" target="_blank" rel="noopener noreferrer" class="pub-link">
+              <span class="pub-num">05</span>
+              <div class="pub-body">
+                <div class="pub-meta">
+                  <span class="journal-badge journal-badge--gold">Nature</span>
+                  <span class="year-badge">2021</span>
+                  <span class="pub-ext">PubMed ↗</span>
+                </div>
+                <p class="pub-citation">Lee JH, Kim JY, Noh S, Lee H, Lee SY, Mun JY, <strong>Park H</strong>, Chung WS. Astrocytes phagocytose adult hippocampal synapses for circuit homeostasis. <em>Nature</em>. 2021;590(7847):612–617.</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="pub-item">
+            <a href="https://pubmed.ncbi.nlm.nih.gov/32624506/" target="_blank" rel="noopener noreferrer" class="pub-link">
+              <span class="pub-num">06</span>
+              <div class="pub-body">
+                <div class="pub-meta">
+                  <span class="journal-badge">Exp Neurobiol</span>
+                  <span class="year-badge">2020</span>
+                  <span class="pub-ext">PubMed ↗</span>
+                </div>
+                <p class="pub-citation">Oh JY, Han JH, Lee H, Han YE, Rah JC, <strong>Park H</strong>. Labeling Dual Presynaptic Inputs using cFork Anterograde Tracing System. <em>Exp Neurobiol</em>. 2020;29(3):219–229.</p>
+              </div>
+            </a>
+          </li>
+        </ol>
+
+        <div class="section-footer-nav">
+          <button type="button" class="next-section-btn" data-goto="4">
+            <span>Next Section</span>
+            <span class="next-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 5: SELECTED PUBLICATIONS (2005-2019) ==================== -->
+    <section class="page-section" id="sec-5" data-section-index="4" aria-labelledby="sec5-title">
+      <div class="section-shell sec5-shell">
+        <header class="pub-header reveal" style="--delay: 0.05s;">
+          <div class="pub-header-left">
+            <span class="pill-badge">Research Archive</span>
+            <h2 class="section-title" id="sec5-title">Selected publications</h2>
+            <p class="pub-period">2005–2019</p>
+          </div>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Hyungju+Park%5BFull+Author+Name%5D+NOT+%2839714435%5BPMID%5D+OR+15988923%5BPMID%5D+OR+15967507%5BPMID%5D%29&sort=date" target="_blank" rel="noopener noreferrer" class="pubmed-cta-btn pubmed-cta-btn--subtle">
+            <span>Full PubMed Archive ↗</span>
+          </a>
+        </header>
+
+        <div class="pub-archive-grid">
+          <!-- Column 1: 2014–2019 -->
+          <div class="pub-era-col reveal" style="--delay: 0.12s;">
+            <h3 class="era-heading">2014–2019</h3>
+            <ol class="pub-list pub-list--archive" start="7">
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/31416903/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">07</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge">Learn Mem</span>
+                      <span class="year-badge">2019</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Kaang BK. Balanced actions of protein synthesis and degradation in memory formation. <em>Learn Mem</em>. 2019;26(9):299–306.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30022873/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">08</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge">Exp Neurobiol</span>
+                      <span class="year-badge">2018</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>. Cortical Axonal Secretion of BDNF in the Striatum Is Disrupted in the Mutant-huntingtin Knock-in Mouse Model of Huntington's Disease. <em>Exp Neurobiol</em>. 2018;27(3):217–225.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30013065/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">09</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge journal-badge--gold">Nat Commun</span>
+                      <span class="year-badge">2018</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation">Jhang J, Lee H, Kang MS, Lee HS, <strong>Park H</strong>, Han JH. Anterior cingulate cortex and its input to the basolateral amygdala control innate fear response. <em>Nat Commun</em>. 2018;9(1):2744.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/25645137/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">10</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge">Mol Brain</span>
+                      <span class="year-badge">2015</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Han KS, Seo J, Lee J, Dravid SM, Woo J, Chun H, Cho S, Bae JY, An H, Koh W, Yoon BE, Berlinguer-Palmini R, Mannaioni G, Traynelis SF, Bae YC, Choi SY, Lee CJ. Channel-mediated astrocytic glutamate modulates hippocampal synaptic plasticity by activating postsynaptic NMDA receptors. <em>Mol Brain</em>. 2015;8:7.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/25467984/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">11</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge journal-badge--gold">Neuron</span>
+                      <span class="year-badge">2014</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Popescu A, Poo MM. Essential role of presynaptic NMDA receptors in activity-dependent BDNF secretion and corticostriatal LTP. <em>Neuron</em>. 2014;84(5):1009–1022.</p>
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Column 2: 2005–2013 -->
+          <div class="pub-era-col reveal" style="--delay: 0.2s;">
+            <h3 class="era-heading">2005–2013</h3>
+            <ol class="pub-list pub-list--archive" start="12">
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/24321245/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">12</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge">Mol Brain</span>
+                      <span class="year-badge">2013</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Han KS, Oh SJ, Jo S, Woo J, Yoon BE, Lee CJ. High glutamate permeability and distal localization of Best1 channel in CA1 hippocampal astrocyte. <em>Mol Brain</em>. 2013;6:54.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/23254191/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">13</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge journal-badge--gold">Nat Rev Neurosci</span>
+                      <span class="year-badge">2013</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Poo MM. Neurotrophin regulation of neural circuit development and function. <em>Nat Rev Neurosci</em>. 2013;14(1):7–23.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/19828819/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">14</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge">J Neurosci</span>
+                      <span class="year-badge">2009</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Oh SJ, Han KS, Woo DH, Park H, Mannaioni G, Traynelis SF, Lee CJ. Bestrophin-1 encodes for the Ca2+-activated anion channel in hippocampal astrocytes. <em>J Neurosci</em>. 2009;29(41):13063–13073.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/18547981/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">15</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge">Mol Cells</span>
+                      <span class="year-badge">2008</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Pack C, Kinjo M, Kaang BK. In vivo quantitative analysis of PKA subunit interaction and cAMP level by dual color fluorescence cross correlation spectroscopy. <em>Mol Cells</em>. 2008;26(1):87–92.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/17512412/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">16</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge journal-badge--gold">Cell</span>
+                      <span class="year-badge">2007</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation">Lee SH, Lim CS, <strong>Park H</strong>, Lee JA, Han JH, Kim H, Cheang YH, Lee SH, Lee YS, Ko HG, Jang DH, Kim H, Miniaci MC, Bartsch D, Kim E, Bailey CH, Kandel ER, Kaang BK. Nuclear translocation of CAM-associated protein activates transcription for long-term facilitation in Aplysia. <em>Cell</em>. 2007;129(4):801–812.</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="pub-item">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/16192395/" target="_blank" rel="noopener noreferrer" class="pub-link">
+                  <span class="pub-num">17</span>
+                  <div class="pub-body">
+                    <div class="pub-meta">
+                      <span class="journal-badge">J Neurosci</span>
+                      <span class="year-badge">2005</span>
+                      <span class="pub-ext">PubMed ↗</span>
+                    </div>
+                    <p class="pub-citation"><strong>Park H</strong>, Lee JA, Lee C, Kim MJ, Chang DJ, Kim H, Lee SH, Lee YS, Kaang BK. An Aplysia type 4 phosphodiesterase homolog localizes at the presynaptic terminals of Aplysia neuron and regulates synaptic facilitation. <em>J Neurosci</em>. 2005;25(39):9037–9045.</p>
+                  </div>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="section-footer-nav">
+          <button type="button" class="next-section-btn" data-goto="5">
+            <span>Next Section</span>
+            <span class="next-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 6: MEET THE ICN TEAM ==================== -->
+    <section class="page-section" id="sec-6" data-section-index="5" aria-labelledby="sec6-title">
+      <div class="section-shell sec6-shell">
+        <header class="section-head reveal" style="--delay: 0.05s;">
+          <span class="pill-badge">People</span>
+          <h2 class="section-title" id="sec6-title">Meet the ICN Team</h2>
+        </header>
+
+        <div class="team-layout">
+          <!-- Left: PI Profile Card -->
+          <article class="glass-card pi-card reveal" style="--delay: 0.12s;">
+            <div class="pi-top">
+              <div class="pi-photo-frame">
+                <img src="assets/member_hyungju_park.png?v=hires" alt="Hyungju Park (박형주), Ph.D." />
+              </div>
+              <div class="pi-identity">
+                <span class="role-badge role-badge--pi">Principal Investigator (PI)</span>
+                <h3 class="pi-name">Hyungju Park <span class="name-ko">(박형주)</span>, Ph.D.</h3>
+              </div>
+            </div>
+
+            <div class="pi-details">
+              <div class="pi-group">
+                <h4>Experience</h4>
+                <ul>
+                  <li>Senior / Principal Research Scientist, KBRI (2015–present)</li>
+                  <li>Visiting Scientist, MIT (2025–2026)</li>
+                  <li>Adjunct Professor, DGIST (2015–2023)</li>
+                  <li>Postdoctoral Fellow / Associate Specialist, UC Berkeley (2009–2015)</li>
+                  <li>Postdoctoral Fellow, KIST (2007–2009)</li>
+                </ul>
+              </div>
+              <div class="pi-group">
+                <h4>Education</h4>
+                <ul>
+                  <li>Ph.D., Seoul National University (2000–2007)</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- Right: Lab Members Grid (5 members) -->
+          <div class="members-grid reveal" style="--delay: 0.2s;">
+            <article class="member-card glass-card">
+              <div class="member-photo-wrap">
+                <img src="assets/member_jeongho_han.png?v=hires" alt="Jeongho Han (한정호), M.S." />
+              </div>
+              <div class="member-info">
+                <h3 class="member-name">Jeongho Han <span class="name-ko">(한정호)</span>, M.S.</h3>
+                <p class="member-role">Research Scientist</p>
+                <div class="member-tags">
+                  <span class="tag">Molecular and cellular biology</span>
+                  <span class="tag">Neuron–astrocyte crosstalk</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="member-card glass-card">
+              <div class="member-photo-wrap">
+                <img src="assets/member_hyunyoung_kim.png?v=hires" alt="Hyunyoung Kim (김현영)" />
+              </div>
+              <div class="member-info">
+                <h3 class="member-name">Hyunyoung Kim <span class="name-ko">(김현영)</span></h3>
+                <p class="member-role">Ph.D. Candidate (DGIST)</p>
+                <div class="member-tags">
+                  <span class="tag">Molecular biology</span>
+                  <span class="tag">Behavior</span>
+                  <span class="tag">Muscle–brain crosstalk</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="member-card glass-card">
+              <div class="member-photo-wrap">
+                <img src="assets/member_songa_shin.png?v=hires" alt="Song A Shin (신송아)" />
+              </div>
+              <div class="member-info">
+                <h3 class="member-name">Song A Shin <span class="name-ko">(신송아)</span></h3>
+                <p class="member-role">M.S. Student (KNU)</p>
+                <div class="member-tags">
+                  <span class="tag">Molecular and cellular biology</span>
+                  <span class="tag">Neuron–astrocyte crosstalk</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="member-card glass-card">
+              <div class="member-photo-wrap">
+                <img src="assets/member_hyeyeon_kim.png?v=hires" alt="Hyeyeon Kim (김혜연)" />
+              </div>
+              <div class="member-info">
+                <h3 class="member-name">Hyeyeon Kim <span class="name-ko">(김혜연)</span></h3>
+                <p class="member-role">Ph.D. Candidate (DGIST)</p>
+                <div class="member-tags">
+                  <span class="tag">Molecular and cellular biology</span>
+                  <span class="tag">Electrophysiology</span>
+                  <span class="tag">Neuron–astrocyte crosstalk</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="member-card glass-card">
+              <div class="member-photo-wrap member-photo-wrap--soft-portrait">
+                <img src="assets/member_seyeon_park.png?v=hires" alt="Seyeon Park (박세연)" />
+              </div>
+              <div class="member-info">
+                <h3 class="member-name">Seyeon Park <span class="name-ko">(박세연)</span></h3>
+                <p class="member-role">M.S. Student (DGIST)</p>
+                <div class="member-tags">
+                  <span class="tag">Molecular and cellular biology</span>
+                  <span class="tag">Aging mechanism / Translatome</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Bottom Alumni Banner -->
+        <div class="alumni-banner glass-card reveal" style="--delay: 0.28s;">
+          <span class="alumni-label">Alumni</span>
+          <p class="alumni-list">
+            <span>오준영 (Research Scientist)</span>
+            <span class="sep">·</span>
+            <span>이제선 (Postdoctoral Fellow)</span>
+            <span class="sep">·</span>
+            <span>윤성령 (M.S.)</span>
+            <span class="sep">·</span>
+            <span>김지영 (Ph.D.)</span>
+            <span class="sep">·</span>
+            <span>정세진 (M.S.)</span>
+            <span class="sep">·</span>
+            <span>박서윤 (M.S.)</span>
+            <span class="sep">·</span>
+            <span>문희주 (Research Scientist)</span>
+            <span class="sep">·</span>
+            <span>이효은 (Research Scientist)</span>
+          </p>
+        </div>
+
+        <div class="section-footer-nav">
+          <button type="button" class="next-section-btn" data-goto="6">
+            <span>Next Section</span>
+            <span class="next-arrow" aria-hidden="true">↓</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 7: JOIN THE ICN LAB ==================== -->
+    <section class="page-section" id="sec-7" data-section-index="6" aria-labelledby="sec7-title">
+      <div class="section-shell sec7-shell">
+        <header class="section-head reveal" style="--delay: 0.05s;">
+          <span class="pill-badge pill-badge--gold">Open Positions</span>
+          <h2 class="section-title" id="sec7-title">Join the ICN Lab</h2>
+        </header>
+
+        <!-- Application Banner -->
+        <div class="apply-banner glass-card glass-card--accent reveal" style="--delay: 0.12s;">
+          <div class="apply-text">
+            <p class="apply-ko">CV/이력서와 지원 동기 또는 연구계획을 <a href="mailto:phj.mnb@gmail.com">phj.mnb@gmail.com</a>으로 보내주시기 바랍니다.</p>
+            <p class="apply-en">Send your CV/resume and a cover letter outlining your research interests to <a href="mailto:phj.mnb@gmail.com">phj.mnb@gmail.com</a></p>
+          </div>
+          <a href="mailto:phj.mnb@gmail.com" class="apply-btn">
+            <span>Apply via Email</span>
+            <span class="apply-mail">phj.mnb@gmail.com ↗</span>
+          </a>
+        </div>
+
+        <!-- 3 Recruitment Cards -->
+        <div class="recruit-grid">
+          <article class="glass-card recruit-card reveal" style="--delay: 0.18s;">
+            <div class="recruit-card-head">
+              <span class="recruit-num">01</span>
+              <h3>Post-doctoral fellow</h3>
+            </div>
+            <dl class="recruit-dl">
+              <div class="recruit-field">
+                <dt>연구 (Research)</dt>
+                <dd>
+                  <span class="txt-ko">신경세포–성상교세포 상호작용, 뇌전증 치료, 근육 유래 인지 증강, 노화·퇴행성 뇌질환</span>
+                  <span class="txt-en">Neuron–astrocyte crosstalk, treatment strategy for epilepsy, muscle-derived cognitive enhancement, brain aging &amp; neurodegeneration</span>
+                </dd>
+              </div>
+              <div class="recruit-field">
+                <dt>자격 (Qualifications)</dt>
+                <dd>
+                  <span class="txt-ko">관련 분야 석·박사, 학위 취득 3년 이내 또는 fellowship 보유자 우대</span>
+                  <span class="txt-en">Ph.D. in a relevant field, within 3 years of degree or fellowship holders preferred</span>
+                </dd>
+              </div>
+              <div class="recruit-field">
+                <dt>외국인 지원자 (International Applicants)</dt>
+                <dd>
+                  <span class="txt-ko">한국어로 원활히 소통 가능한 외국인 지원자 환영</span>
+                  <span class="txt-en">International applicants proficient in Korean are welcomed</span>
+                </dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="glass-card recruit-card reveal" style="--delay: 0.24s;">
+            <div class="recruit-card-head">
+              <span class="recruit-num">02</span>
+              <h3>Ph.D. student</h3>
+            </div>
+            <dl class="recruit-dl">
+              <div class="recruit-field">
+                <dt>연구 (Research)</dt>
+                <dd>
+                  <span class="txt-ko">신경세포–성상교세포 상호작용, 뇌전증 치료, 근육 유래 인지 증강</span>
+                  <span class="txt-en">Neuron–astrocyte crosstalk, treatment strategy for epilepsy, muscle-derived cognitive enhancement</span>
+                </dd>
+              </div>
+              <div class="recruit-field">
+                <dt>전형 및 제출 서류 (Admissions)</dt>
+                <dd>
+                  <span class="txt-ko">참여 대학 규정에 따름</span>
+                  <span class="txt-en">According to the admissions guidelines of participating universities</span>
+                </dd>
+              </div>
+              <div class="recruit-field">
+                <dt>참여 대학 (Programs)</dt>
+                <dd>
+                  <span class="txt-ko">DGIST, 경북대(KNU), 서울대 의대(SNU College of Medicine)</span>
+                </dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="glass-card recruit-card reveal" style="--delay: 0.3s;">
+            <div class="recruit-card-head">
+              <span class="recruit-num">03</span>
+              <h3>Undergraduate internship</h3>
+            </div>
+            <dl class="recruit-dl">
+              <div class="recruit-field">
+                <dt>자격 (Eligibility)</dt>
+                <dd>
+                  <span class="txt-ko">생명과학·의학·약학·화학 등 관련 전공 학부 3–4학년</span>
+                  <span class="txt-en">3rd–4th year undergraduate students in biological sciences, medicine, pharmacy, chemistry, or related fields</span>
+                </dd>
+              </div>
+              <div class="recruit-field">
+                <dt>우대 (Preferred)</dt>
+                <dd>
+                  <span class="txt-ko">대학원 진학을 고려하는 지원자 우대</span>
+                  <span class="txt-en">Prospective graduate students preferred</span>
+                </dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+
+        <footer class="section-end-footer reveal" style="--delay: 0.34s;">
+          <p>Intercellular Communication for Cognitive Enhancement and Neuroplasticity (ICN) Lab · Korea Brain Research Institute (KBRI)</p>
+          <button type="button" class="next-section-btn next-section-btn--top" data-goto="0">
+            <span>Back to Top</span>
+            <span class="next-arrow" aria-hidden="true">↑</span>
+          </button>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
